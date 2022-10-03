@@ -1,1 +1,1 @@
-# DSA-for-FAANG-inuron
+# DSA-for-FAANG-ineuron
