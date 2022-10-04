@@ -8,13 +8,13 @@ function kMostFrequentWords(arr,k) {
   
   const sorted = Object.keys(hashTable).sort((a, b) => { 
     if (hashTable[b] === hashTable[a]) { // if both are equal, then sort by lexicographical
-        return a > b ? 1 : -1 ;
+      return a.toLowerCase().localeCompare(b.toLowerCase()) ;
     }
     return hashTable[b] - hashTable[a] ;
   })
-  return sorted.slice(0,k).sort();
+  return sorted.slice(0,k);
 }
 
-const arr =  ['priya', 'bhatia', 'akshay', 'arpit', 'priya', 'arpit'];
+const arr =  ['priya','Priya', 'Priya', 'bhatia', 'akshay', 'arpit', 'priya', 'arpit'];
 const k = 3;
 console.log(kMostFrequentWords(arr,k));
